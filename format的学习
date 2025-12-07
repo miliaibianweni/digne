@@ -42,3 +42,8 @@ print("what did togawa sakiko said?",end='')
 what_it_said=input()
 print(f"so,soyo said{what_she_said},anon said{what_milkdragon_said},sakiko said{what_it_said} ")
 #result（放上面的进pycharm）
+#以上的东西都可以缩写
+sakiko_said=input("Sakiko said what?: ")
+soyo_said=input("soyo said what?: ")
+aono_said=input("aono said what?: ")
+print(f"小祥说了{sakiko_said}，soyo说了{soyo_said}，aono说了{aono_said}")
