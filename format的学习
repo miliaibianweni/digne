@@ -31,3 +31,14 @@ print("""
 print（"dsjknadnjka"
 "jasidjasiudj"
 "snj")
+#转义字符反斜杠 \ 会取消其后紧跟字符的语法特殊含义，使其仅被解析为该字符的字面本身，而非语法符号或预定义转义功能。
+print("千早爱音要说什么？千早爱音：\"我是奶龙\",椎名立希：\"\\蛤？\\\"")
+#result=(千早爱音要说什么？千早爱音："我是奶龙",椎名立希："\蛤？\")
+print("nagasaki soyo说了什么？",end='')
+what_she_said=input()
+print("anon chihaua说了什么？",end='')
+what_milkdragon_said=input()
+print("what did togawa sakiko said?",end='')
+what_it_said=input()
+print(f"so,soyo said{what_she_said},anon said{what_milkdragon_said},sakiko said{what_it_said} ")
+#result（放上面的进pycharm）
