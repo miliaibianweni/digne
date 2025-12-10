@@ -17,4 +17,4 @@ print(f"三角初华：你对我的在意程度是{Doloris}。住在{mygo}，你
 #这个在powershall输入“python 文件名 +变量数-1（知识点补充A）”
 #A:"ave_mujica,saki =argv"中=argv前有几个变量，在powershall里就输入变量数减一。
 #“falcons =">"”这个就是在powershall里你回复时放在前面的“>”，起装饰作用，可以随便换比如“》56大三564d”都行
-#input（falcons）不代表回复的是“falcons”，而是falcons的内容+你回复的内容
+#input（falcons）不代表回复的是“falcons”，而是在powershall里先显示falcons的内容然后再获取你回复的内容
