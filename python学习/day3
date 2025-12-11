@@ -1,1 +1,36 @@
-1.
+from sys import argv
+mygo,mujica = argv
+print(f"mujica即将爆炸{mujica}.")
+print("如果不想要mujica爆炸就按Ctrl—C控制喵梦不摘面具。")
+print("如果你确实想让mujica爆炸就按回车建让喵梦摘面具")
+input("你的选择是：")
+print("喵梦正在炸团······")
+band=open(mujica,'w',encoding='utf-8')
+#open()里的'w'是写入的指令（还有'r' 'a' 'r+' 'a+'等登） encoding='utf-8'则是让你能读取中文字符和写入中文字符的代码
+print("墨提斯正在上线，她全都不会弹！")
+band.truncate()
+#truncate（）则是删除你指针开始的数据若用truncate（0）则是删除所有数据
+
+print("现在选择五名mujica的新队员")
+
+player1=input("第一块拼图：")
+player2=input("第二块拼图：")
+player3=input("第三块拼图：")
+player4=input("第四块拼图：")
+player5=input("最后一块拼图：")
+
+print("银河战舰正在组建中")
+band.write(player1)
+band.write('\n')
+band.write(player2)
+band.write('\n')
+band.write(player3)
+band.write('\n')
+band.write(player4)
+band.write('\n')
+band.write(player5)
+band.write('\n')
+
+print("银河战舰已组建完毕")
+band.close()
+#在终端里面输入：python monesy.py(你的代码所在文件名) "B:\donk.txt"（你要存放的文本的地址）
