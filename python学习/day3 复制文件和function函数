@@ -1,0 +1,16 @@
+from sys import argv
+from os.path import exists
+from_file = "B:\donk.txt"
+to_file ="B:\monesy.txt"
+in_file=open(from_file,encoding="utf-8")
+indata=in_file.read()
+print(f"输出文件的大小为{len(indata)}字节")
+print(f"输出文件是否存在{exists(to_file)}")
+print("按ENTER继续，CTRL+C结束")
+input()
+out_file=open(to_file,"w",encoding="utf-8")
+out_file.write(indata)
+print("程序已完成")
+out_file.close()
+in_file.close()
+#这是文件复制的代码
