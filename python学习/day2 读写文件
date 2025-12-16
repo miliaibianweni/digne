@@ -34,3 +34,4 @@ band.write('\n')
 print("银河战舰已组建完毕")
 band.close()
 #在终端里面输入：python monesy.py(你的代码所在文件名) "B:\donk.txt"（你要存放的文本的地址）
+#在终端里不用在路径前加r，因为r是python专属的
