@@ -1,7 +1,7 @@
 from sys import argv
 from os.path import exists
-from_file = "B:\donk.txt"
-to_file ="B:\monesy.txt"
+from_file = r"B:\donk.txt"
+to_file =r"B:\monesy.txt"
 in_file=open(from_file,encoding="utf-8")
 indata=in_file.read()
 print(f"输出文件的大小为{len(indata)}字节")
