@@ -1,0 +1,30 @@
+from sys import argv
+team_spirit=r"B:\donk.txt"
+#访问文件地址时要在前面加r或者在"B:\\donk.txt"，目的是防止计算机看到\ndonk，中的\n触发换行
+def top1(f):
+    print(f.read())
+
+def top2(f):
+    f.seek(0)
+
+def top3(zwyoo,f):
+    print(zwyoo,f.readline())
+
+monesy=open(team_spirit,encoding="utf-8")
+
+print("首先，让我们打印整个文件：\n")
+top1(monesy)
+
+print("现在让我们倒回去，有点像磁带倒带。")
+top2(monesy)
+
+print("让我们打印三次：")
+
+faker=1
+top3(faker,monesy)
+
+faker+=1
+top3(faker,monesy)
+
+faker+=1
+top3(faker,monesy)
