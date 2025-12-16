@@ -7,6 +7,12 @@ def top1(f):
 #f.read（3）代表从指针处开始读三个字符，不足三个读有的，同理f.readline（5）也就是读指针开始的5个字符
 def top2(f):
     f.seek(0)
+#f.seek就是把指针强行拉回0（开头位置），f.seek（5）就是拉回第五个字符的位置，全称是.seek(offset, whence)：
+#offset	偏移量（要移动的字符数，正数往后移，负数往前移）
+#whence	基准位置（默认 0）：
+#0 = 以文件开头为基准（最常用）
+#1 = 以当前指针位置为基准
+#2 = 以文件末尾为基准
 
 def top3(zwyoo,f):
     print(zwyoo,f.readline())     #f.readline（）就是读一行的内容，f.read是读取全部内容，而f.readline就是read + line 读一行
