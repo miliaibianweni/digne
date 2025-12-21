@@ -41,3 +41,21 @@ def mujica(func):
     print("如何调用内部函数呢？")
 
 mujica(mygo)
+#以下为闭包，调用函数和装饰器的共同使用
+import time
+def mygo(func):
+    def anon():
+        print("开始组建mygo")
+        start=time.time()
+        func() #调用函数
+        end=time.time()
+        print("mygo被soyo炸团了")
+        print(f"一共就持续了{end-start}：.2f秒")
+    return anon  #闭包
+
+@mygo  #语法糖，（@后面跟函数名）等效于写了下面的函数变量名mujica=mygo（mujica）
+def mujica():
+    time.sleep(2)
+    print("苦来兮苦已经解散了")
+
+mujica()
