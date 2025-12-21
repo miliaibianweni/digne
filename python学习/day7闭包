@@ -1,6 +1,6 @@
 def mygo(deng):
     def ave_mujica(sakiko):
-        return sakiko**deng
+        return sakiko**deng    
 #幂函数就是x**y表示x的y次方
     return ave_mujica
 anon=mygo(2)
@@ -29,3 +29,15 @@ result2 = add_5(10) # 5+10=15
 
 print(result1)  # 输出：8
 print(result2)  # 输出：15
+
+#调用内部函数的方法
+def mygo():
+    print("这是函数的调用")
+
+def mujica(func):
+    print("func只是一个变量名")
+    func()
+#注意要想调用内部函数就是靠func（）这一步，而且func（）必须和def mujica（func）中的（）里的变量名一样
+    print("如何调用内部函数呢？")
+
+mujica(mygo)
