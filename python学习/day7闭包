@@ -1,1 +1,31 @@
+def mygo(deng):
+    def ave_mujica(sakiko):
+        return sakiko**deng
+#幂函数就是x**y表示x的y次方
+    return ave_mujica
+anon=mygo(2)
+soyo=mygo(3)
+#mygo（）中的（）里数字是几就是几次方
+print(anon(5))
+print(soyo(5))
+#原理：函数闭包，即在def语句里嵌套def语句可以让外部的局部变量数据保留
+#以下为豆包的例子：
+def outer_func(x):
+    # 外部函数的局部变量
+    outer_var = x
+    
+    def inner_func(y):
+        # 内部函数引用外部函数的局部变量outer_var
+        return outer_var + y
+    
+    # 外部函数返回内部函数（不执行，只返回函数对象）
+    return inner_func
 
+# 调用外部函数，得到内部函数对象，此时outer_func已执行完毕
+add_5 = outer_func(5)
+# 调用内部函数，依然能访问到outer_func中定义的outer_var=5
+result1 = add_5(3)  # 5+3=8
+result2 = add_5(10) # 5+10=15
+
+print(result1)  # 输出：8
+print(result2)  # 输出：15
