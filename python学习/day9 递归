@@ -1,0 +1,14 @@
+def mygo(i):
+    if i>0:
+        print("欧内该瓦达西")
+        i-=1
+        mygo(i)
+mygo(10)
+#递归就是函数调用自身的过程
+def mujica(n):
+    if n==1:
+         return 1
+    else:
+         return n*mujica(n-1)
+
+print(mujica(10))
