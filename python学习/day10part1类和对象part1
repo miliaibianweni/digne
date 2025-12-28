@@ -125,6 +125,7 @@ class bang:
         self.m.play1()
         self.a.play1()
         self.c.play4()
+#别想着把m换回mygo或者mygo（）也能运行，完全不行，必须严格按照格式
 
         print("这里没有人类了")
 
