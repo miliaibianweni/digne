@@ -60,3 +60,77 @@ a.play1()
 #result：anon_chihaya
 sakiko：真是高高在上呢
 #子类的player1优先于父类的同名变量
+#如果在一个类里有多个类怎么判断同一名字的优先级呢？
+class mygo:
+    player=5
+    guitar='anon_chihaya'
+    Bass='nagasaki_soyo'
+    def play1(self):
+        print("我是伦敦逃兵千早爱音")
+
+    def play2(self):
+        print(" 我是月之森寡妇长崎素世")
+
+    def play3(self):
+        print("我是鼓手椎名立希")
+
+class ave_mujica:
+#注意这里的ave_mujica不是mygo的子类，这点非常重要！！！！！！！！！！
+    mortis=100
+    def play1(self):
+        print("sakiko：真是高高在上呢")
+
+
+class crychic(mygo,ave_mujica):
+#这是crychic同时继承了两个类不是组合不要搞混了
+#这里的mygo和ave_mujica是两个无关类，不是之前的父类和子类关系
+    pass
+b=crychic()
+b.play1()
+#result：我是伦敦逃兵千早爱音
+#也就是说如果一个类同时继承多个类，但是多个类里有变量名字是完全相同的按从左到右顺序，以在crychic(mygo,ave_mujica) 中（）里左边的变量优先级更高
+#另外补充一点继承的两个类中不能有一个是另一个的父类，因为子类已经完全覆盖了父类，代码会无法运行的，只用写子类就行了，或者不要让子类继承父类
+
+
+#那么怎么让多个类并列呢？也就是类的组合
+class mygo:
+    player=5
+    guitar='anon_chihaya'
+    Bass='nagasaki_soyo'
+    def play1(self):
+        print("我是伦敦逃兵千早爱音")
+
+    def play2(self):
+        print(" 我是月之森寡妇长崎素世")
+
+    def play3(self):
+        print("我是鼓手椎名立希")
+
+class ave_mujica:
+    mortis=100
+    def play1(self):
+        print("sakiko：真是高高在上呢")
+
+
+class crychic:
+    def play4(self):
+        print("我从来没有觉得组乐队开心过")
+
+class bang:
+    a=ave_mujica()
+    m=mygo()
+    c=crychic()
+#这里这些类的括号 ()都至关重要,是赋值类本身和实例对象的区别
+    def final(self):
+        self.m.play1()
+        self.a.play1()
+        self.c.play4()
+
+        print("这里没有人类了")
+
+t1=bang()
+t1.final()
+#result：我是伦敦逃兵千早爱音
+sakiko：真是高高在上呢
+我从来没有觉得组乐队开心过
+这里没有人类了
