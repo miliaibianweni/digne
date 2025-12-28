@@ -1,0 +1,21 @@
+class mygo:
+    player=5
+    guitar='anon_chihaya'
+    Bass='nagasaki_soyo'
+    def play1(self):
+        print("我是伦敦逃兵千早爱音")
+
+    def play2(self):
+        print(" 我是月之森寡妇长崎素世")
+
+    def play3(self):
+        print("我是鼓手椎名立希")
+
+t1=mygo()
+print(t1.player)
+print(t1.guitar)
+print(t1.Bass)
+t1.play1()
+t1.play2()
+t1.play3()
+#class就是创造了一个类
