@@ -18,4 +18,45 @@ print(t1.Bass)
 t1.play1()
 t1.play2()
 t1.play3()
+t2.player=10
+print(t2.player)
+t1.mujica_leader="togaw_asakiko"
+print(t1.mujica_leader)
+#result：
+5
+anon_chihaya
+nagasaki_soyo
+我是伦敦逃兵千早爱音
+ 我是月之森寡妇长崎素世
+我是鼓手椎名立希
+10
+togaw_asakiko
+#这说明t2对类里的重定义不会影响t1，也不会影响原类,在t1中加入了mujica_leader也不会影响原数组
+#使用类时千万不能忘记self参数，python之所以能知道是哪个对象在调用类就是依靠的self参数
 #class就是创造了一个类
+#可以使用from a（python文件）import b（b可以是变量可以说类，函数或者数组）就可以在导入的文件里用b了
+
+class mygo:
+    player=5
+    guitar='anon_chihaya'
+    Bass='nagasaki_soyo'
+    def play1(self):
+        print("我是伦敦逃兵千早爱音")
+
+    def play2(self):
+        print(" 我是月之森寡妇长崎素世")
+
+    def play3(self):
+        print("我是鼓手椎名立希")
+
+class ave_mujica(mygo):
+#在ave_mujica后面加括号就是相当于ave_mujica这个类是mygo的子类，mygo是父类
+    def play1(self):
+#在ave_mujica里若添加一个新的参数，调用 ave_mujica（子类）时可以直接调用这个参数而不影响mygo（父类），若为相同的参数名，则优先调用子类里的数据
+        print("sakiko：真是高高在上呢")
+a=ave_mujica()
+print(a.guitar)
+a.play1()
+#result：anon_chihaya
+sakiko：真是高高在上呢
+#子类的player1优先于父类的同名变量
